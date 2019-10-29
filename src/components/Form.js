@@ -33,12 +33,8 @@ class Form extends React.Component {
     }
 
     if (!errors){
-      const emailResponse = sendMail(this.state);
-      console.log(emailResponse);
-      this.setState({
-        sent: true,
-        failed: emailResponse
-      });
+      this.props.sentMail()
+      sendMail(this.state, this.props.mailSuccess, this.props.mailError);
     }
   }
 
@@ -52,7 +48,7 @@ class Form extends React.Component {
     // bug adds key value to state. BUT also creates obj
     const returnObj = this.state[stateKey];
     returnObj[key] = value;
-    console.log(returnObj);
+    console.log('return obj setCheckboxState:', returnObj);
     this.setState(returnObj);
   }
 

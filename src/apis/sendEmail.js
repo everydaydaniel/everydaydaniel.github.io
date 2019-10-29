@@ -1,9 +1,9 @@
 import emailjs from 'emailjs-com';
 import api_keys from './email_token';
 
-const sendMail = (data) => {
+const sendMail = (data, mailSuccess, mailError) => {
 
-  const templateParams = {
+  let templateParams = {
     name: data.name,
     email: data.email,
     body: data.body,
@@ -20,10 +20,10 @@ const sendMail = (data) => {
     api_keys.USER_ID
   ).then(
     function(response){
-      console.log(response);
+      mailSuccess();
     },
     function(err){
-      console.log(err);
+      mailError();
     }
   )
 }
