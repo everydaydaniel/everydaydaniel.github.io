@@ -21,24 +21,20 @@ class Quote extends React.Component {
   // in the callbacks.
   sentMail = () => {
     this.setState({sent: true});
-    console.log("mail sent");
   }
 
   mailSuccess = () => {
     this.setState({success: true});
     this.mailDone();
-    console.log("mail success");
   }
 
   mailError = () => {
     this.setState({error: true});
     this.mailDone();
-    console.log("mail error");
   }
 
   mailDone = () => {
     this.setState({done: true});
-    console.log("mail done");
   }
 
   render() {
