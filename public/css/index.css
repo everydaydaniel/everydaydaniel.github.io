@@ -1,0 +1,20 @@
+@font-face {
+    font-family: inktrap;
+    src: url(fonts/WhyteInktrap-Regular.woff2);
+}
+
+
+/*
+https://stackoverflow.com/questions/12046315/prevent-overscrolling-of-web-page
+*/
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    font-family: inktrap !important;
+    color: white;
+    height: 100%;
+    overflow: auto;
+}
