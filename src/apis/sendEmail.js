@@ -20,10 +20,10 @@ const sendMail = (data) => {
     api_keys.USER_ID
   ).then(
     function(response){
-      return true;
+      console.log(response);
     },
     function(err){
-      return false;
+      console.log(err);
     }
   )
 }
