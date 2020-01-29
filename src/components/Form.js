@@ -131,9 +131,9 @@ class Form extends React.Component {
                 <div className='full-width'>
                   <h3>Quantity</h3>
                   <div className='checkbox-wrap'>
-                    <Checkbox name='small-order' stateKey='quantity' updateState={this.setCheckboxState}/> <span className='checkbox-text'>1-50</span>
-                    <Checkbox name='medium-order' stateKey='quantity' updateState={this.setCheckboxState}/> <span className='checkbox-text'>51-100</span>
-                    <Checkbox name='large-order' stateKey='quantity' updateState={this.setCheckboxState}/> <span className='checkbox-text'>More</span>
+                    <Checkbox name='smallOrder' stateKey='quantity' updateState={this.setCheckboxState}/> <span className='checkbox-text'>1-50</span>
+                    <Checkbox name='mediumOrder' stateKey='quantity' updateState={this.setCheckboxState}/> <span className='checkbox-text'>51-100</span>
+                    <Checkbox name='largeOrder' stateKey='quantity' updateState={this.setCheckboxState}/> <span className='checkbox-text'>More</span>
                   </div>
                 </div>
               </div>
