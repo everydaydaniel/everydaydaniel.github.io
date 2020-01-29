@@ -28,7 +28,7 @@ function setup() {
 
   //defining the goody background colors and how to randomly select one
 
-  listOfColors = [color('#ff0000'), color('#0000ff'), color('#00ff00')];
+  listOfColors = [color('#ff0000'), color('#0000ff')];
   selectedColor = int(random(0, listOfColors.length));
 	backGroundColor = listOfColors[selectedColor];
 }

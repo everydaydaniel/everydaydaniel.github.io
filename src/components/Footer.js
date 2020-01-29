@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../css/footer.css';
 
 // made footer a route in app.js to pass in path information
 const changeFooterDisplay = (pathname) =>  {
@@ -11,8 +12,8 @@ const changeFooterDisplay = (pathname) =>  {
 
 const Footer = (props) => {
   return (
-    <div className={`${changeFooterDisplay(props.location.pathname)} container footer-wrap`}>
-      <div className='row'>
+    <footer className={`${changeFooterDisplay(props.location.pathname)} container footer-wrap`}>
+      <div className='row footer-content'>
         <div className='one-third column left footer-col'>
           <Link to='/contact'>
             <img className='footer-img' alt='contact us' src='images/goody-mail.svg' />
@@ -25,7 +26,7 @@ const Footer = (props) => {
           </Link>
         </div>
       </div>
-    </div>
+    </footer>
   );
 
 };

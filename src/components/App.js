@@ -35,8 +35,9 @@ class App extends React.Component  {
 
   render() {
     return (
-      <div id="app-wrapper">
-        <BrowserRouter>
+      <BrowserRouter>
+
+
           <Menu menuState={this.state} showMenu={this.changeMenuState} />
           <Header showMenu={this.changeMenuState} />
           <Route path='/' exact component={HomePage} />
@@ -44,8 +45,9 @@ class App extends React.Component  {
           <Route path='/contact' exact component={Contact} />
           <Route path='/about' exact component={About} />
           <Route component={Footer} />
-        </BrowserRouter>
-      </div>
+
+
+      </BrowserRouter>
     );
   }
 }

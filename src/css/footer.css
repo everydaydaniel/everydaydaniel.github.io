@@ -1,0 +1,7 @@
+.footer-wrap {
+  flex-shrink: 0;
+}
+
+.footer-content {
+  flex: 1 0 auto;
+}

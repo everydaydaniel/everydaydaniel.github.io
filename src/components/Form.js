@@ -8,7 +8,9 @@ class Form extends React.Component {
     super(props);
     this.state = {
       errors: {
-        emailError:''
+        emailError:'',
+        nameError:'',
+        bodyError:''
       },
       name: '',
       email: '',
@@ -30,6 +32,20 @@ class Form extends React.Component {
       returnObj.emailError = <span className='error-message'>&nbsp; *please enter a valid email*</span>;
       this.setState(returnObj);
       errors = true;
+    }
+
+    if (Object.keys(this.state.name).length === 0){
+        let returnObj = this.state.errors;
+        returnObj.nameError = <span className='error-message'>&nbsp; *please enter a valid name*</span>;
+
+        errors = true;
+    }
+
+    if (Object.keys(this.state.body).length === 0){
+        let returnObj = this.state.errors;
+        returnObj.bodyError = <span className='error-message'>&nbsp; *please enter short description*</span>;
+
+        errors = true;
     }
 
     if (!errors){
@@ -68,6 +84,7 @@ class Form extends React.Component {
                   <input type='text' name='name' value={this.state.name} onChange={(event) => this.handleChange(event)} autoComplete='false' />
                   </label>
                 </div>
+                {this.state.errors.nameError}
                 <div className='text-input'>
                   <label className='input-labels'>
                     Email
@@ -83,6 +100,7 @@ class Form extends React.Component {
                   <input type='text' name='body' value={this.state.body} onChange={(event) => this.handleChange(event)} autoComplete='false' />
                   </label>
                 </div>
+                {this.state.errors.bodyError}
               </div>
               <div className='one-half column form-inputs checkbox-inputs'>
                 <div className='full-width'>
