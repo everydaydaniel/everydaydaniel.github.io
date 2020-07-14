@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Menu extends React.Component {
-  
+
   getMenuState = () => {
     if (this.props.menuState.menu){
       return '';
@@ -21,16 +21,16 @@ class Menu extends React.Component {
         </div>
       </div>
       <div className='row menu-option'>
+        <div className='row menu-option'>
+          <Link onClick={this.props.showMenu} to='/'>
+            <h2>Home</h2>
+          </Link>
+        </div>
         <Link onClick={this.props.showMenu} to='/quote'>
           <h2>Quote</h2>
         </Link>
       </div>
       <div className='container menu-options-wrapper'>
-        <div className='row menu-option'>
-          <Link onClick={this.props.showMenu} to='/about'>
-            <h2>About</h2>
-          </Link>
-        </div>
         <div className='row menu-option'>
           <Link onClick={this.props.showMenu} to='/contact'>
             <h2>Contact</h2>
